@@ -71,3 +71,7 @@ a:link, a:visited {
 	font-family: 'Oswald', sans-serif;
 	text-align: center; 
 }
+
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+       cursor: pointer;
+}
