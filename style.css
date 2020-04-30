@@ -64,7 +64,7 @@
 
 a:link, a:visited { 
     color: #000;
-    cursor: auto;
+    cursor: pointer;
 	text-decoration:none;
 }
 #title, #content, #local_navigation {
