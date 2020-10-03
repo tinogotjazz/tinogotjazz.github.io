@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	indexPageName="index.html/gallery"
+
+>
+  <image imageURL="images/Eliot_Mint.jpg"
+	thumbURL="thumbs/Eliot_Mint.jpg"
+	linkURL="images/Eliot_Mint.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/Eliot_Mint.jpg">
+    <title><![CDATA[Eliot_Mint]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/fisnikDOBRECI_OneBeatB_02Feb_Sharesession2_048.jpg"
+	thumbURL="thumbs/fisnikDOBRECI_OneBeatB_02Feb_Sharesession2_048.jpg"
+	linkURL="images/fisnikDOBRECI_OneBeatB_02Feb_Sharesession2_048.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/fisnikDOBRECI_OneBeatB_02Feb_Sharesession2_048.JPG">
+    <title><![CDATA[fisnikDOBRECI_OneBeatB_02Feb_Sharesession2_048]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/hakan aker istanbul.jpg"
+	thumbURL="thumbs/hakan aker istanbul.jpg"
+	linkURL="images/hakan aker istanbul.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/hakan aker istanbul.jpg">
+    <title><![CDATA[hakan aker istanbul]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/martin-heft edit.jpg"
+	thumbURL="thumbs/martin-heft edit.jpg"
+	linkURL="images/martin-heft edit.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/martin-heft edit.jpg">
+    <title><![CDATA[martin-heft edit]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/Masakowski_hector004.jpg"
+	thumbURL="thumbs/Masakowski_hector004.jpg"
+	linkURL="images/Masakowski_hector004.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/Masakowski_hector004.jpg">
+    <title><![CDATA[Masakowski_hector004]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/Moblie_Acoustic_Armani_Mask.jpg"
+	thumbURL="thumbs/Moblie_Acoustic_Armani_Mask.jpg"
+	linkURL="images/Moblie_Acoustic_Armani_Mask.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/Moblie_Acoustic_Armani_Mask.jpg">
+    <title><![CDATA[Moblie_Acoustic_Armani_Mask]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/OneBeat_2016_Portraits_Alexia_Webster148.jpg"
+	thumbURL="thumbs/OneBeat_2016_Portraits_Alexia_Webster148.jpg"
+	linkURL="images/OneBeat_2016_Portraits_Alexia_Webster148.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/OneBeat_2016_Portraits_Alexia_Webster148.jpg">
+    <title><![CDATA[OneBeat_2016_Portraits_Alexia_Webster148]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/OneBeat_2016_Portraits_Alexia_Webster157.jpg"
+	thumbURL="thumbs/OneBeat_2016_Portraits_Alexia_Webster157.jpg"
+	linkURL="images/OneBeat_2016_Portraits_Alexia_Webster157.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/OneBeat_2016_Portraits_Alexia_Webster157.jpg">
+    <title><![CDATA[OneBeat_2016_Portraits_Alexia_Webster157]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/onebeat-2016-alexia-webster-26-2.jpg"
+	thumbURL="thumbs/onebeat-2016-alexia-webster-26-2.jpg"
+	linkURL="images/onebeat-2016-alexia-webster-26-2.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/onebeat-2016-alexia-webster-26-2.jpg">
+    <title><![CDATA[onebeat-2016-alexia-webster-26-2]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/P2150159.jpg"
+	thumbURL="thumbs/P2150159.jpg"
+	linkURL="images/P2150159.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/P2150159.JPG">
+    <title><![CDATA[P2150159]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="images/OneBeat Colombia Metal Grinding small.jpg"
+	thumbURL="thumbs/OneBeat Colombia Metal Grinding small.jpg"
+	linkURL="images/OneBeat Colombia Metal Grinding small.jpg"
+	linkTarget="_blank"
+	sourcePath="/Users/tino/Documents/GitHub/tinogotjazz.github.io/images/portraits/OneBeat Colombia Metal Grinding small.jpg">
+    <title><![CDATA[OneBeat Colombia Metal Grinding small]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</juiceboxgallery>

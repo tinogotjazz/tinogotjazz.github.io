@@ -75,3 +75,7 @@ a:link, a:visited {
 a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
        cursor: pointer;
 }
+
+.social_icon_home {
+	margin: 10px;
+}
