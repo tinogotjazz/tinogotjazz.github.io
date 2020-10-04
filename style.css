@@ -120,6 +120,11 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 	
 }
 
+.press {
+	align: center;
+	width: 80%;
+}
+
 
 .fancybox:hover {
 	filter:grayscale(10%);
