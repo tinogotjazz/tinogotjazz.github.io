@@ -110,3 +110,19 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
 #nav-social > li {
 	margin: 0px;
 }
+
+#press_photos {
+	list-style-type: none;
+	display: flex;
+	margin: 5px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+}
+
+
+.fancybox:hover {
+	filter:grayscale(10%);
+	opacity:.9;
+	transform: scale(1.1);	
+}
