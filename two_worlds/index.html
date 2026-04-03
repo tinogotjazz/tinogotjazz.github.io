@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two Worlds – Steve Masakowski</title>
 
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="Two Worlds – Steve Masakowski">
+  <meta property="og:description" content="Out now on Spotify, Apple Music, and more!">
+  <meta property="og:image" content="https://steve-masakowski.com/EPK/images/album_cover.jpeg">
+  <meta property="og:url" content="https://steve-masakowski.com/landing-page.html">
+  <meta property="og:type" content="music.song">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Two Worlds – Steve Masakowski">
+  <meta name="twitter:description" content="Out now on Spotify, Apple Music, and more!">
+  <meta name="twitter:image" content="https://steve-masakowski.com/EPK/images/album_cover.jpeg">
+
+  <link rel="icon" type="image/jpeg" href="https://steve-masakowski.com/EPK/images/album_cover.jpeg">
+
+  <!-- Meta Pixel -->
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1369716191593534');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1369716191593534&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #fff;
+      background: linear-gradient(135deg, #7db9d1, #0b6357, #162447);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      padding: 24px;
+      box-sizing: border-box;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 520px;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    .cover-art {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 0px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      opacity: 0.88;
+      margin: 0 0 1.5rem;
+    }
+
+    .streaming-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 1.75rem;
+    }
+
+    .streaming-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .streaming-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      background: rgba(255,255,255,0.22);
+    }
+
+    .platform-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 24px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .platform-spotify { background: #1DB954; }
+    .platform-bandcamp { background: #629aa9; }
+    .platform-pandora { background: #3668ff; }
+    .platform-tidal { background: #111111; }
+    .platform-apple { background: #fa243c; }
+    .platform-amazon { background: #00a8e1; }
+    .platform-itunes { background: #b145ff; }
+
+    form {
+      margin-top: 1rem;
+    }
+
+    input[type="email"] {
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1rem;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    button.submit {
+      padding: 12px 20px;
+      background: #1DB954;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    button.submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(29,185,84,0.35);
+    }
+
+    button.submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    #formMessage {
+      margin-top: 0.75rem;
+      font-size: 14px;
+      color: #fff;
+      display: none;
+    }
+
+    .small {
+      margin-top: 1rem;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        padding: 1.5rem;
+      }
+
+      .streaming-links a {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    .featuring {
+  text-align: center;
+  line-height: 1.6;
+}
+    .video-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 1.5rem auto;
+  padding-bottom: 56.25%;
+  height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img class="cover-art" src="../EPK/images/album_cover.jpeg" alt="Two Worlds artwork">
+ 
+    <h1>Two Worlds</h1>
+    
+    <p>Out now on your favorite platforms 🌊</p>
+
+   
+    <div class="streaming-links">
+      <a href="https://open.spotify.com/track/3cBBF38RVMKqkVFuHVgb5S" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'Spotify'});">
+        <span class="platform-icon platform-spotify">S</span>
+        Spotify
+      </a>
+
+      <a href="https://music.apple.com/us/album/_/1876748266?app=music&at=1000lHKX&ct=odesli_http&i=1876748267&itscg=30200&itsct=odsl_m&ls=1&mt=1" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'AppleMusic'});">
+        <span class="platform-icon platform-apple">A</span>
+        Apple Music
+      </a>
+
+      <a href="https://stevemasakowski.bandcamp.com/track/two-worlds" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'Bandcamp'});">
+        <span class="platform-icon platform-bandcamp">B</span>
+        Bandcamp
+      </a>
+
+      <a href="https://www.pandora.com/artist/steve-masakowski/2-worlds-feat-sasha-masakowski-brian-blade-martin-masakowski-oscar-rossignoli-and-rex-gregory/2-worlds-feat-sasha-masakowski-brian-blade-martin-masakowski-oscar-rossignoli-and-rex-gregory/TRbrgmKZ9tdkKqq" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'Pandora'});">
+        <span class="platform-icon platform-pandora">P</span>
+        Pandora
+      </a>
+
+      <a href="https://music.amazon.com/albums/B0GQCW6B47?trackAsin=B0GQD667WP" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'AmazonMusic'});">
+        <span class="platform-icon platform-amazon">AM</span>
+        Amazon Music
+      </a>
+
+      <a href="https://listen.tidal.com/track/502653531" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'Tidal'});">
+        <span class="platform-icon platform-tidal">T</span>
+        TIDAL
+      </a>
+
+      <a href="https://music.apple.com/us/album/_/1876748266?app=itunes&at=1000lHKX&ct=odesli_http&i=1876748267&itscg=30200&itsct=odsl_m&ls=1&mt=1" target="_blank" rel="noopener noreferrer" onclick="fbq('track','Lead',{platform:'iTunes'});">
+        <span class="platform-icon platform-itunes">i</span>
+        iTunes
+      </a>
+    </div>
+    
+ <div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/LUc6mBfzz-c"
+    title="Two Worlds – Steve Masakowski"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+    <p class="featuring">
+  <strong>Featuring:</strong><br>
+  Steve Masakowski - Guitar<br>
+  Sasha Masakowski - Vocals<br>
+  Martin Masakowski - Bass<br>
+  Brian Blade - Drums<br>
+  Oscar Rossignoli - Piano<br>
+  Rex Gregory - Saxophone
+</p>
+
+  
+
+    <div class="small">
+      If you want to hear the full album before its release, <br>
+      pick up a physical copy CD or Vinyl from your local Louisiana Music Factoy. <br>
+      Thank you for supporting independent music ❤️
+    </div>
+  </div>
+
+  
+</body>
+</html>
