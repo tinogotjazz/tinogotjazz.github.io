@@ -1,1 +1,878 @@
+/* === Global Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* === Section 1: Hero Layout === */
+.hero {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #7db9d1, #0b6357);
+ /* same background for both columns */
+  background-size: cover;
+  background-position: center;
+  gap: 0rem;
+  padding: 0rem;
+}
+
+.background-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9; /* adjust transparency */
+  z-index: 0;
+
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 90%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+.content-column {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* === Left column: Text content === */
+.content-column {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  color: #000000; /* text readable over background */
+}
+
+.content-column h1 {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 3rem;
+  margin: 0 0 0.5rem;
+}
+
+.content-column h2 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.content-column p.intro {
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.musicians {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 2rem;
+}
+
+.musicians li {
+  margin-bottom: 0.5rem;
+}
+
+.credits {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.release {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.listen-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #f16e00;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: background 0.2s;
+}
+
+.listen-button:hover {
+  background: #d95f00;
+}
+
+/* === Right column: Album + Artist photo === */
+.album-column {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Artist photo container */
+.artist-photo-container {
+  width: 70%;
+  max-width: 400px;
+  border: 5px solid black;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.artist-photo-container img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Album cover */
+.album_cover {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.album_cover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+  .content-column, .album-column {
+    flex: 1 1 100%;
+  }
+  .artist-photo-container, .album_cover {
+    max-width: 80%;
+  }
+}
+
+
+
+
+
+/* === Optional Audio Player (bottom) === */
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.audio-player audio {
+  flex: 1;
+  max-width: 700px;
+}
+
+.audio-player #current-track {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+/* Orange section with reversed layout */
+.section2 {
+  background: linear-gradient(135deg, #dfc29e, #b76522); /* orange gradient */
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+/* Reverse layout: image left, content right */
+.section2 .hero {
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section2 .content {
+  flex: 0 0 50%;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000; /* or white if preferred */
+}
+
+/* Left image */
+.section2 .image-side.reversed {
+  flex: 0 0 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section2 .image-side.reversed .artist-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Section 2 quote */
+.section2-quote {
+  text-align: center;      /* centers the text */
+  font-family: "Helvetica Neue", Arial, sans-serif; /* keep same font */
+  font-weight: normal;     /* match your Section 1 weight */
+  line-height: 1.6;        /* optional spacing */
+  margin: 0 auto;          /* center horizontally */
+  max-width: 600px;        /* optional: constrain width for readability */
+}
+
+/* Track list container (vertical) */
+.track-list-container {
+  max-width: 300px;
+  margin: 2rem auto;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.track-list li {
+  padding: 0.5rem 1rem;
+  background: #222;
+  color: #fff;
+  margin-bottom: 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.track-list li:hover {
+  background: #f16e00;
+  transform: scale(1.02);
+}
+
+/* Fixed bottom audio player (full width) */
+.audio-player {
+  position: fixed;
+  
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* full width */
+  background-color: #000;  /* black background */
+  color: #fff;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.5);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;      /* vertically center content */
+  justify-content: center;  /* center player + text horizontally if needed */
+  gap: 1rem;                /* space between text and controls */
+  flex-wrap: wrap;          /* wrap on smaller screens */
+}
+
+/* Audio controls */
+.audio-player audio {
+  flex: 1;                 /* take remaining space */
+  max-width: 700px;
+}
+
+/* Now playing text */
+.audio-player #current-track {
+  font-weight: bold;
+  white-space: nowrap;      /* prevent wrapping */
+}
+
+/* === Mobile Responsive Styles === */
+@media screen and (max-width: 768px) {
+  /* Stack the hero section vertically */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* Full width content */
+  .content {
+    flex: 1;
+    padding: 2rem 1.5rem;
+    min-height: 60vh;
+  }
+
+  /* Full width image side */
+  .image-side {
+    flex: 1;
+    min-height: 40vh;
+    width: 100%;
+  }
+
+  /* Adjust typography for mobile */
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .content p,
+  .content ul {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  /* Center album cover on mobile */
+  .album_cover {
+    top: 50%;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  /* Make listen button more touch-friendly */
+  .listen-button {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  /* Adjust track list for touch */
+  .track-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Mobile-optimized audio player */
+  .audio-player {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .audio-player audio {
+    width: 100%;
+  }
+
+  .audio-player #current-track {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Section 2 mobile adjustments */
+  .section2 {
+    flex-direction: column;
+  }
+
+  .section2 .hero {
+    flex-direction: column;
+  }
+
+  .section2 .content,
+  .section2 .image-side.reversed {
+    flex: 1;
+    width: 100%;
+  }
+
+  .section2-quote {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+}
+
+/* ======= Video Section ======= */
+.video-section {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  overflow: hidden; /* ensures the blur doesn't overflow */
+  color: white;
+  align-items: flex-start;
+}
+
+/* Blurred background */
+.video-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('images/steve_studio.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  z-index: 0;
+}
+
+/* Dark overlay */
+.video-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6); /* dark overlay */
+  z-index: 0;
+}
+
+/* Left column (text) */
+.video-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.video-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.video-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+/* Right column (video + photos) */
+.video-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  min-width: 300px;
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  margin-bottom: 2rem;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Photo grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.photo-grid img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ======= Blue Gradient Section (Section 4) ======= */
+.section4 {
+  display: flex;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #c8d3ec, #08763a);
+  color: white;
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
+}
+
+/* Left column: Track list */
+.blue-content {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+}
+
+.blue-content h2 {
+  text-align: center;           
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+/* Track list container */
+.track-list-container {
+  display: flex;
+  justify-content: center;      /* center the container */
+  margin: 0 auto 2rem auto;     /* vertical spacing, center horizontally */
+}
+
+/* Track list itself */
+.track-list {
+  width: 100%;                    /* wider list in the column */
+  max-width: 1000px;              /* optional max width */
+}
+
+/* Track items */
+.track-list li {
+  background: #222;
+  color: #fff;
+  padding: 0.6rem 1rem;          /* reduce vertical padding to shorten list */
+  margin-bottom: 0.4rem;         /* smaller gap between items */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-align: left;
+}
+
+.track-list li:hover {
+  background: #f16e00;
+  transform: scale(1.02);
+}
+
+.track-list li .track-artist {
+  font-size: 0.85rem;            /* slightly smaller artist text */
+  font-weight: 300;
+  color: #ddd;
+  display: block;
+  margin-top: 0.2rem;
+  text-align: left;
+}
+
+.track-contact {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;             /* ensures text is readable on the blue gradient */
+}
+
+.track-contact a {
+  color: #000000;           /* highlight email link */
+  text-decoration: none;
+}
+
+.track-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Right column: Image */
+.blue-image {
+  flex: 0 0 40%;
+  overflow: hidden;
+}
+
+.blue-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ======= Mobile Responsive ======= */
+@media screen and (max-width: 768px) {
+  .video-section,
+  .section4 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-content,
+  .video-column,
+  .blue-content,
+  .blue-image {
+    max-width: 100%;
+  }
+
+  .video-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .video-content p {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    max-width: 100%;
+    margin: 0 auto 2rem;
+    border-radius: 10px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+
+  .blue-content {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .blue-image {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .track-list-container {
+    max-width: 100%;
+  }
+}
+
+
+/* ======= Section 5: About the Masakowski Family ======= */
+/* Section 5 */
+.section5 {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #9cb0a8, #e0e0e0);
+  color: #222;
+  padding: 4rem 2rem;
+}
+
+.section5-title {
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #002611;
+}
+
+.section5-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Text split into two columns */
+.section5-text {
+  flex: 1 1 60%;
+  column-count: 2;           /* split into two columns */
+  column-gap: 2rem;          /* spacing between text columns */
+  font-size: 0.95rem;        /* smaller font */
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+  margin-bottom: 3rem;       /* added larger bottom margin */
+}
+
+/* Highlight links */
+.section5-text .highlight-link {
+  color: #08763a;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Right image column */
+.section5-image {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.section5-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.section5-cta {
+  font-family: "Georgia", serif;
+  margin: 3rem auto 6rem auto; /* centers the block horizontally */
+  color: #222;
+  max-width: 65%;
+  text-align: center; /* all text centered */
+}
+
+.section5-cta p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.section5-cta a {
+  color: #08763a;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.section5-cta a:hover {
+  color: #0b4f2b;
+}
+
+/* Styled button similar to Listen button */
+.join-button {
+  display: inline-block;
+  margin: 1.2rem auto;
+  padding: 0.8rem 1.5rem;
+  background: #f16e00;
+  color: rgb(0, 0, 0);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.join-button:hover {
+  background: #d95f00;
+}
+
+
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+  .section5-content {
+    flex-direction: column;
+  }
+
+  
+  .section5-text {
+    column-count: 1;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4rem;     /* extra space on mobile */
+  }
+
+  .section5-image {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* ======= Mobile Responsive ======= */
+@media screen and (max-width: 768px) {
+  .section5 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section5-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .section5-image {
+    flex: 1 1 100%;
+    width: 100%;
+    height: auto;
+    margin-top: 2rem;
+  }
+}
+
+/* === Fix hero centering + horizontal scroll on mobile === */
+@media screen and (max-width: 768px) {
+  /* Prevent horizontal scroll caused by oversized elements */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Center all content in hero */
+  .hero {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .content-column {
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .content-column h1,
+  .content-column h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Ensure the album image stays centered */
+  .album-column {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* === Keep text left-aligned on mobile for video + about sections === */
+@media screen and (max-width: 768px) {
+  .video-section,
+  .section5 {
+    text-align: left;
+  }
+
+  .video-content,
+  .about-content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .video-content h2,
+  .about-content h2 {
+    text-align: left;
+  }
+
+  .video-content p,
+  .about-content p {
+    text-align: left;
+  }
+}
+
+/* === Section 5: Text left-aligned on mobile, CTA stays centered === */
+@media screen and (max-width: 768px) {
+  .section5-text {
+    text-align: left;      /* main text left-aligned */
+  }
+
+  .section5-text p {
+    text-align: left;      /* paragraphs left-aligned */
+  }
+
+  .section5-cta {
+    text-align: center;    /* CTA stays centered */
+    margin-left: auto;
+  }
+}
+
+.section5-cta a {
+  white-space: nowrap; /* prevents line breaks */
+}
